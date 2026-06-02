@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jean M. Cajamarca | Jack Karusel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=VT323&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Scanline overlay -->
+  <div class="scanlines" aria-hidden="true"></div>
+  <!-- CRT flicker overlay -->
+  <div class="crt-flicker" aria-hidden="true"></div>
+
+  <!-- Boot sequence splash -->
+  <div id="boot-screen" aria-hidden="true">
+    <div class="boot-text" id="boot-text"></div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header id="site-header">
+    <nav class="navbar">
+      <div class="nav-logo">
+        <span class="bracket">[</span>Jean Marco Cajamarca / Jack Karusel<span class="bracket">]</span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-item">ABOUT</a></li>
+        <li><a href="#projects" class="nav-item">PROJECTS</a></li>
+        <li><a href="#blog" class="nav-item">BLOG</a></li>
+        <li><a href="#resume" class="nav-item">RESUME</a></li>
+        <li><a href="#contact" class="nav-item">CONTACT</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-status">
+          <span class="status-dot"></span>
+          <span class="status-text"> STATUS SO FAR // I AM AVAILABLE FOR WORK</span>
+        </div>
+     <div class="hero-header-container">
+        <h1 class="hero-name">
+          <span class="hero-first">JEAN MARCO</span> <br />
+          <span class="hero-last">CAJAMARCA</span>
+        </h1>
+     <div class="hero-image-wrapper">
+        <img src="assets/selfie.jpeg" alt="Jean Marco Cajamarca" class="hero-selfie">
+        </div>
+     </div>
+        <p class="hero-tagline" id="hero-tagline"></p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">VIEW MY PROJECTS</a>
+          <a href="#contact" class="btn btn-secondary">CONTACT ME</a>
+        </div>
+        <div class="hero-social">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            <span>INSTAGRAM</span>
+          <a href="https://www.linkedin.com/in/jean-marco-cajamarca-045386259/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            <span>LINKEDIN</span>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon></svg>
+            <span>YOUTUBE</span>
+          <a href="https://bsky.app" target="_blank" rel="noopener" class="social-link" aria-label="Bluesky">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.75 19.25c-2.43 0-4.5-1.57-4.5-4 0-1.4.6-2.6 1.55-3.37l1.08-.85c.34-.27.42-.75.18-1.12C3.9 8.1 3.25 6.33 3.25 4.5c0-2.43 2.07-4.25 4.5-4.25 1.5 0 2.85.77 3.65 1.95.23.34.63.45.98.26C13.06 2.07 14.15 1.75 15.25 1.75c2.43 0 4.5 1.57 4.5 4 0 1.4-.6 2.6-1.55 3.37l-1.08.85c-.34.27-.42.75-.18 1.12.56.88 1.21 2.65 1.21 4.48 0 2.43-2.07 4.25-4.5 4.25-1.5 0-2.85-.77-3.65-1.95-.23-.34-.63-.45-.98-.26-1.1.58-2.2 1.35-2.35 2.55-.1.85-.75 1.25-1.5 1.25z"></path></svg>
+            <span>BLUESKY</span>
+          <a href="https://twitch.tv" target="_blank" rel="noopener" class="social-link" aria-label="Twitch">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7"></path></svg>
+            <span>TWITCH</span>
+          <a href="https://x.com" target="_blank" rel="noopener" class="social-link" aria-label="X">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733-16zM4 20l6.768-6.768m2.464-2.464L20 4"></path></svg>
+            <span>X/TWITTER</span>
+          <a href="https://discord.com" target="_blank" rel="noopener" class="social-link" aria-label="Discord">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="1"></circle><circle cx="15" cy="12" r="1"></circle><path d="M15 6.1c.2-.1.5-.2.7-.2 1.1-.3 2.1-.2 3 .3.1.1.2.2.1.4-.2.4-.4.7-.6 1.1v.2c0 2.8-1.1 5.4-3.1 7.3-.1.1-.3.1-.4 0-.4-.3-.7-.6-1-1-.1-.1-.1-.2 0-.3.3-.3.6-.7.9-1.1.1-.1.1-.3 0-.4-.4-.3-.8-.7-1.1-1.1-.1-.1-.1-.3 0-.4.3-.3.6-.7.9-1.1.1-.1.1-.3 0-.4-.3-.4-.6-.8-1-1.1-.1-.1-.3-.1-.4 0-.3.3-.6.7-.9 1.1-.1.1-.3.1-.4 0-.3-.3-.7-.7-1.1-1.1-.1-.1-.1-.3 0-.4.3-.4.6-.8.9-1.2.1-.1.1-.3 0-.4-.4-.4-.8-.7-1.2-1.1-.1-.1-.3-.1-.4 0-.3.3-.6.7-.9 1.1-.1.1-.3.1-.4 0-.4-.4-.9-.7-1.4-1.1-.1-.1-.3-.1-.4.1-.2.4-.4.8-.6 1.2 0 .1 0 .3.1.4.3.4.6.8.9 1.2.1.1.1.3 0 .4-.4.4-.8.8-1.2 1.1-.1.1-.3.1-.4 0-.3-.3-.6-.7-.9-1.1-.1-.1-.3-.1-.4 0-.3.3-.7.7-1 1.1-.1.1-.1.3 0 .4.4.4.8.8 1.1 1.2.1.1.1.3 0 .4-.3.4-.6.8-.9 1.1-.1.1-.1.2 0 .3.3.4.6.7 1 1-.1.1-.3.1-.4 0-2-1.9-3.1-4.5-3.1-7.3v-.2c-.2-.4-.4-.7-.6-1.1-.1-.2 0-.3.1-.4.9-.5 1.9-.6 3-.3.2.1.5.2.7.2"></path></svg>
+            <span>DISCORD</span>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            <span>FACEBOOK</span>
+          <a href="https://github.com/JeanMarcoCajamarca" target="_blank" rel="noopener" class="social-link" aria-label="Github">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            <span>GITHUB</span>
+        </div>
+      <div class="hero-terminal" aria-hidden="true">
+        <div class="terminal-header">
+          <span class="t-dot red"></span>
+          <span class="t-dot yellow"></span>
+          <span class="t-dot green"></span>
+          <span class="t-title">@portfolio:~</span>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+          <p><span class="t-prompt">$</span> <span class="t-cmd">whoami?</span></p>
+          <p class="t-output">jean_marco_cajamarca {OR} jack_karusel</p>
+          <p><span class="t-prompt">$</span> <span class="t-cmd">whereiwork?</span></p>
+          <p class="t-output">Idonthaveone.com</p>
+          <p><span class="t-prompt">$</span> <span class="t-cmd">whyhireme?</span></p>
+          <p class="t-output">I love video games! Start coding!</p>
+          <p><span class="t-prompt">$</span> <span class="t-cmd">skills.txt</span></p>
+          <div class="t-output" id="skills-output"></div>
+          <p class="t-cursor-line"><span class="t-prompt">$</span> <span class="t-cursor">█</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-header">
+        <span class="section-num">//</span>
+        <h2 class="section-title">ABOUT.TXT</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-intro">Hello, World. I'm Jean Marco Cajamarca. But you can call me <b>Jack Karusel</b>!</p>
+          <p> I am a video game developer focused on creating immersive gameplay systems and polished player experiences. My work spans gameplay mechanics, UI systems, and experimental indie projects.</p>
+          <p> When it involves compiling datasets, designing systems, or building side projects in game development, I bring analytical rigor and creative energy to everything I ship.</p>
+          <p> I am also a tech & business professional! Full of passion about solving real-world problems through data, strategy, and technology, I operate at the intersection of economics, business intelligence, and product thinking.</p>
+          <p> I was born in New York City, NY, in the year 2002. My father and mother were born in Ecuador and Mexico respectively. They immigrated to the United States but received no US citizenship status. Even after marriage, they were not able to receive pensions or financial assitance. All they could afford is public housing and cash to support their kids.</p>
+          <p> I attended P.S. 72 Lexington Academy where I graduated in 2013. I later attended DREAM Charter School, graduated in 2016. Throughout my high school era, I attended All Hallows High School, becoming one of the first students to graduate in the midst of the COVID-19 pandemic in the year 2020.</p>
+          <p> I attended the Redemptoris Mater Seminary in Denver, CO, taking courses at the St. John Vianney Theological Seminary, from 2020 to 2022.</p>
+          <p> I am currently attending CUNY Hunter College, majoring in Economics. But how the heck am I going to blend tech stuff to Econ?</p>
+          
+          <div class="about-specs">
+            <div class="spec-item">
+              <span class="spec-label">LOCATION</span>
+              <span class="spec-value">New York, NY, US</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">STATUS</span>
+              <span class="spec-value spec-green">Open to Opportunities</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">FIELDS</span>
+              <span class="spec-value">HTML / CSS / JAVASCRIPT</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">SIDE QUESTS</span>
+              <span class="spec-value">Economics, Writing, Tech, Business</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-skills-panel">
+          <div class="panel-label">SKILL_STACK.LOG</div>
+          <div class="skills-bars" id="skills-bars"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-header">
+        <span class="section-num">//</span>
+        <h2 class="section-title">PROJECTS.DIR</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Game Dev Portfolio card -->
+        <article class="project-card featured">
+          <div class="card-tag">FEATURED</div>
+          <div class="card-icon">🎮</div>
+          <h3 class="card-title">GAME DEV PORTFOLIO</h3>
+          <p class="card-desc">A dedicated showcase of my game development work — concepts, prototypes, and shipped projects built with passion and code!</p>
+          <div class="card-stack">
+            <span class="tag">Game Design</span>
+            <span class="tag">Development</span>
+            <span class="tag">Interactive</span>
+          </div>
+        </article>
+
+    <!-- BLOG -->
+    <section id="blog">
+      <div class="section-header">
+        <span class="section-num">//</span>
+        <h2 class="section-title">BLOG.LOG</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="blog-grid">
+
+        <article class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">20XX.00.00</span>
+            <span class="blog-category">TECH</span>
+          </div>
+          <h3 class="blog-title">Why Every Business Analyst Should Learn to Code</h3>
+          <p class="blog-excerpt">The case for technical literacy in business roles — and the specific skills that unlock the most value, fast.</p>
+          <a href="#" class="blog-read-more">READ MORE →</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume">
+      <div class="section-header">
+        <span class="section-num">//</span>
+        <h2 class="section-title">RESUME.PDF</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="resume-panel">
+        <div class="resume-preview">
+          <div class="resume-icon" aria-hidden="true">
+            <svg viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="5" width="70" height="90" rx="4" stroke="currentColor" stroke-width="2"/>
+              <line x1="18" y1="30" x2="62" y2="30" stroke="currentColor" stroke-width="2"/>
+              <line x1="18" y1="42" x2="62" y2="42" stroke="currentColor" stroke-width="1"/>
+              <line x1="18" y1="52" x2="50" y2="52" stroke="currentColor" stroke-width="1"/>
+              <line x1="18" y1="62" x2="55" y2="62" stroke="currentColor" stroke-width="1"/>
+              <line x1="18" y1="72" x2="45" y2="72" stroke="currentColor" stroke-width="1"/>
+              <rect x="18" y="18" width="20" height="6" rx="1" fill="currentColor" opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="resume-info">
+            <p class="resume-name">Jean Marco Cajamarca</p>
+            <p>Jack Karusel</p>
+            <p class="resume-updated">Last updated: N/A</p>
+          </div>
+        </div>
+        <div class="resume-actions">
+          <a href="resume.pdf" download class="btn btn-primary resume-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            DOWNLOAD RESUME
+          </a>
+          <a href="resume.pdf" target="_blank" class="btn btn-secondary resume-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            VIEW ONLINE
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-header">
+        <span class="section-num">//</span>
+        <h2 class="section-title">CONTACT.SH</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="contact-intro">Ready to collaborate? Or do you just want to talk to me about something? Send me a message or call me!</p>
+          <div class="contact-methods">
+            <a href="mailto:Jeanmarcocaj@gmail.com" class="contact-method">
+              <div class="cm-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="cm-text">
+                <span class="cm-label">EMAIL</span>
+                <span class="cm-value">Jeanmarcocaj@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+19174033738" class="contact-method">
+              <div class="cm-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="cm-text">
+                <span class="cm-label">PHONE</span>
+                <span class="cm-value">+1 (917) 403-3738</span>
+              </div>
+            </a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="bracket">[</span>JMC/JK<span class="bracket">]</span>
+        <span class="footer-year" id="footer-year"></span>
+      </div>
+      <p class="footer-copy">2026-present; Built with Claude and ChatGPT. All rights reserved. Under the ownership of Jean Marco Cajamarca.</p>
+      <div class="footer-links">
+        <a href="#hero">SPEED TO THE TOP ↑</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
